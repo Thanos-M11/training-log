@@ -18,9 +18,12 @@ export class CurrentTrainingComponent implements OnInit {
   progress = 0;
   timer!: number;
   dialog = inject(MatDialog);
+  runningExercise!: Exercise | null;
 
   ngOnInit(): void {
     this.startResumeTimer();
+    this.runningExercise =
+      this.trainingService.getRunningExercise() as Exercise | null;
   }
 
   onStop() {

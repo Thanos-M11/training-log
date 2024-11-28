@@ -11,6 +11,9 @@
         required
         #emailInput="ngModel"
       />
+      <mat-hint align="start">
+        <span>example&#64;example.com</span>
+      </mat-hint>
       @if(emailInput.hasError('required')){
       <mat-error>Field must not be empty</mat-error>
       } @if(!emailInput.hasError('required')){
@@ -25,13 +28,16 @@
         ngModel
         name="password"
         required
-        minLength="6"
+        minlength="6"
         #pwInput="ngModel"
       />
-      <mat-hint align="start"
-        >Should be at least 6 characters long {{ pwInput.value?.length }} /
-        6</mat-hint
-      >
+      <mat-hint align="start">
+        <span>At least 6 characters long</span>
+        <span> ( {{ pwInput.value?.length }} / 6 )</span>
+      </mat-hint>
+      @if(pwInput.invalid || pwInput.hasError('minlength')){
+      <mat-error>This is not a valid password</mat-error>
+      }
     </mat-form-field>
     <mat-form-field>
       <mat-label>Your birthdate</mat-label>
