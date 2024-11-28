@@ -22,3 +22,14 @@ demo responsive mobile application in Angular 18.
 ## url
 
 - [Link](https://training-log-demo.web.app/)
+
+## screenshots
+
+![Welcome](public/welcome.png)
+![welcome-sidenav-open](public/welcome-sidenav-open.png)
+![signup](public/signup.png)
+![login](public/login.png)
+![training](public/training.png)
+![Progress](public/progress.png)
+![dialog](public/dialog.png)
+![logs](public/logs.png)
