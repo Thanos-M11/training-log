@@ -1,0 +1,48 @@
+@use "@angular/material" as mat;
+
+.toolbar {
+  @include mat.toolbar-overrides(
+    (
+      container-background-color: navy,
+      container-text-color: #eee,
+    )
+  );
+
+  & {
+    display: flex;
+    gap: 1rem;
+    flex: 1 1 auto;
+    align-items: center;
+  }
+
+  &_logo {
+    & a {
+      text-decoration: none;
+      color: #eee;
+    }
+  }
+
+  &_links {
+    display: flex;
+    margin-left: auto;
+
+    & li {
+      list-style: none;
+      transition: all 0.2s ease;
+
+      & a {
+        text-decoration: none;
+        margin-right: 1rem;
+        font-size: 1.2rem;
+        color: #eee;
+      }
+      &:hover {
+        transform: translateY(-3px);
+      }
+
+      &:active {
+        transform: translateY(1px);
+      }
+    }
+  }
+}

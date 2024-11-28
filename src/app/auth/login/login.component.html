@@ -1,0 +1,20 @@
+<section>
+  <h2>Login</h2>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <mat-label>Your email</mat-label>
+      <input type="email" matInput formControlName="email" />
+      <mat-error>Not a valid email</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Your password</mat-label>
+      <input type="password" matInput formControlName="password" />
+      <mat-error>Not a valid password</mat-error>
+    </mat-form-field>
+
+    <button type="submit" mat-raised-button [disabled]="!form.valid">
+      Login
+    </button>
+  </form>
+</section>

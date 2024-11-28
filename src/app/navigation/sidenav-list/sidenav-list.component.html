@@ -1,0 +1,23 @@
+<mat-nav-list>
+  @if(!isAuth){
+  <a mat-list-item routerLink="/signup" (click)="onClose()">
+    <mat-icon matListItemIcon>face</mat-icon>
+    <span matListItemTitle>Signup</span>
+  </a>
+
+  <a mat-list-item routerLink="/login" (click)="onClose()">
+    <mat-icon matListItemIcon>login</mat-icon>
+    <span matListItemTitle>Login</span>
+  </a>
+  } @if(isAuth){
+  <a mat-list-item routerLink="/training" (click)="onClose()">
+    <mat-icon matListItemIcon>sports_gymnastics</mat-icon>
+    <span matListItemTitle>Training</span>
+  </a>
+
+  <mat-list-item (click)="onLogout()">
+    <mat-icon matListItemIcon>eject</mat-icon>
+    <span matListItemTitle>Logout</span>
+  </mat-list-item>
+  }
+</mat-nav-list>

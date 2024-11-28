@@ -1,0 +1,18 @@
+@use "@angular/material" as mat;
+
+mat-card {
+  padding: 2rem;
+  text-align: center;
+
+  &-actions {
+    margin: 0 auto;
+  }
+}
+
+mat {
+  &-form-field {
+    margin-top: 1rem;
+  }
+  &-select {
+  }
+}
